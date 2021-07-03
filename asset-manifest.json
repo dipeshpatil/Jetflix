@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jetflix/static/css/main.cd9003c8.chunk.css",
+    "main.css": "/jetflix/static/css/main.30a28224.chunk.css",
     "main.js": "/jetflix/static/js/main.82ebe6ea.chunk.js",
     "main.js.map": "/jetflix/static/js/main.82ebe6ea.chunk.js.map",
     "runtime-main.js": "/jetflix/static/js/runtime-main.194b06c8.js",
@@ -12,7 +12,7 @@
     "service-worker.js": "/jetflix/service-worker.js",
     "service-worker.js.map": "/jetflix/service-worker.js.map",
     "static/css/2.af3ab7ac.chunk.css.map": "/jetflix/static/css/2.af3ab7ac.chunk.css.map",
-    "static/css/main.cd9003c8.chunk.css.map": "/jetflix/static/css/main.cd9003c8.chunk.css.map",
+    "static/css/main.30a28224.chunk.css.map": "/jetflix/static/css/main.30a28224.chunk.css.map",
     "static/js/2.b9783d53.chunk.js.LICENSE.txt": "/jetflix/static/js/2.b9783d53.chunk.js.LICENSE.txt",
     "static/media/maskedShape.d764a5c4.svg": "/jetflix/static/media/maskedShape.d764a5c4.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.194b06c8.js",
     "static/css/2.af3ab7ac.chunk.css",
     "static/js/2.b9783d53.chunk.js",
-    "static/css/main.cd9003c8.chunk.css",
+    "static/css/main.30a28224.chunk.css",
     "static/js/main.82ebe6ea.chunk.js"
   ]
 }
