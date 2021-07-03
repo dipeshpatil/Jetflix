@@ -10,8 +10,9 @@ import {
   unavailableLandscape,
 } from "../../config/config";
 import "./ContentModal.css";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import Carousel from "../Carousel/Carousel";
 
 const useStyles = makeStyles((theme) => ({
@@ -133,14 +134,32 @@ export default function TransitionsModal({ children, media_type, id }) {
                     <Carousel id={id} media_type={media_type} />
                   </div>
 
-                  <Button
-                    variant="contained"
-                    startIcon={<YouTubeIcon />}
-                    target="__blank"
-                    href={`https://www.youtube.com/watch?v=${video}`}
-                  >
-                    Watch the Trailer
-                  </Button>
+                  <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                      <Button
+                        variant="contained"
+                        startIcon={<YouTubeIcon />}
+                        target="__blank"
+                        color="primary"
+                        href={`https://www.youtube.com/watch?v=${video}`}
+                      >
+                        Watch the Trailer
+                      </Button>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Button
+                        variant="contained"
+                        startIcon={<WhatsAppIcon />}
+                        target="__blank"
+                        color="secondary"
+                        href={`whatsapp://send?text=\nHere's a movie worth watching!\n${
+                          content.name || content.title
+                        }\n${content.overview}`}
+                      >
+                        Share on Whatsapp
+                      </Button>
+                    </Grid>
+                  </Grid>
                 </div>
               </div>
             </div>
