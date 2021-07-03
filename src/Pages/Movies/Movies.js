@@ -22,7 +22,6 @@ const Movies = () => {
       data.results.sort((a, b) => (a.vote_average < b.vote_average ? 1 : -1))
     );
     setNumOfPages(data.total_pages);
-    console.log(data.results);
   };
 
   useEffect(() => {
