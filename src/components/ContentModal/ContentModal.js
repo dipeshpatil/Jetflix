@@ -9,7 +9,7 @@ import {
   unavailable,
   unavailableLandscape,
 } from "../../config/config";
-import "./ContentModal.css";
+import "./ContentModal.scss";
 import { Button } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Carousel from "../Carousel/Carousel";
