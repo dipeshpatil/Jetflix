@@ -3,12 +3,12 @@
         <style>
             .mask_right {
                 clip-path: url(#right_clip-path);
-                fill: #EA2027;
+                fill: #7e7979;
             }
             
             .mask_left {
                 clip-path: url(#left_clip-path);
-                fill: #EA2027;
+                fill: #7e7979;
             }
             
             .left_triangle {
@@ -44,9 +44,9 @@
     </clipPath>
  
     <linearGradient id="linear-gradient" y1="-17.636" x2="1.197" y2="-17.636" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#EA2027"/>
-      <stop offset="0.621" stop-color="#EA2027"/>
-      <stop offset="1" stop-color="#EA2027"/>
+      <stop offset="0" stop-color="#7e7979"/>
+      <stop offset="0.621" stop-color="#7e7979"/>
+      <stop offset="1" stop-color="#7e7979"/>
     </linearGradient>
         
     <rect id="background_gradient" data-name="background_gradient" class="gradient" width="550" height="220"/>

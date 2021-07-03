@@ -4,15 +4,9 @@
   width: 200px;
   padding: 5px;
   margin: 5px 0;
-  background-color: #212121;
   border-radius: 10px;
   position: relative;
   font-family: "Montserrat", sans-serif;
-}
-
-.media:hover {
-  background-color: #ea2027;
-  color: white;
 }
 
 @media (max-width: 550px) {
@@ -23,6 +17,11 @@
 
 .poster {
   border-radius: 10px;
+}
+
+.poster:hover {
+  filter: sepia(1);
+  transition: 500ms all;
 }
 
 .title {

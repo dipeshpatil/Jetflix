@@ -24,14 +24,18 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     width: "90%",
     height: "80%",
-    backgroundColor: "#212121",
     borderRadius: 4,
     color: "white",
     padding: theme.spacing(1, 1, 3),
   },
 }));
 
-export default function TransitionsModal({ children, media_type, id }) {
+export default function TransitionsModal({
+  children,
+  media_type,
+  id,
+  backgroundCardColor,
+}) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState();
@@ -72,7 +76,7 @@ export default function TransitionsModal({ children, media_type, id }) {
     <>
       <div
         className="media"
-        style={{ cursor: "pointer" }}
+        style={{ cursor: "pointer", backgroundColor: backgroundCardColor }}
         color="inherit"
         onClick={handleOpen}
       >
@@ -85,6 +89,7 @@ export default function TransitionsModal({ children, media_type, id }) {
         open={open}
         onClose={handleClose}
         closeAfterTransition
+        style={{ backgroundColor: backgroundCardColor }}
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
