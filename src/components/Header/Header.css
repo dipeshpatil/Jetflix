@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
-@import "../variables.scss";
 
 .header {
   width: 100%;
@@ -8,12 +7,12 @@
   display: flex;
   justify-content: center;
   text-transform: uppercase;
-  background-color: $primary;
+  background-color: #000;
   font-family: "Oswald", sans-serif;
   font-size: 4vw;
   padding-bottom: 15px;
-  box-shadow: 0px 2px 12px $accent;
-  color: $text_light;
+  box-shadow: 0px 2px 12px #ea2027;
+  color: white;
   z-index: 100;
 }
 

@@ -1,21 +1,18 @@
-@import "../variables.scss";
-
 .media {
-  color: $text_light;
   display: flex;
   flex-direction: column;
   width: 200px;
   padding: 5px;
   margin: 5px 0;
-  background-color: $secondary;
+  background-color: #212121;
   border-radius: 10px;
   position: relative;
   font-family: "Montserrat", sans-serif;
 }
 
 .media:hover {
-  background-color: $accent;
-  color: $text_light;
+  background-color: #ea2027;
+  color: white;
 }
 
 @media (max-width: 550px) {
