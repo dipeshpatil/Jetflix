@@ -146,19 +146,23 @@ export default function TransitionsModal({ children, media_type, id }) {
                         Watch the Trailer
                       </Button>
                     </Grid>
-                    <Grid item xs={12}>
-                      <Button
-                        variant="contained"
-                        startIcon={<WhatsAppIcon />}
-                        target="__blank"
-                        color="secondary"
-                        href={`whatsapp://send?text=\nHere's a movie worth watching!\n${
-                          content.name || content.title
-                        }\n${content.overview}`}
-                      >
-                        Share on Whatsapp
-                      </Button>
-                    </Grid>
+                    {window.screen.width <= 420 ? (
+                      <Grid item xs={12}>
+                        <Button
+                          variant="contained"
+                          startIcon={<WhatsAppIcon />}
+                          target="__blank"
+                          color="secondary"
+                          href={`whatsapp://send?text=%0AHere's a movie worth watching!🔥🎬%0A%0A*${
+                            content.name || content.title
+                          }*%0A${
+                            content.overview
+                          }%0A%0Ahttps://www.youtube.com/watch?v=${video}`}
+                        >
+                          Share on Whatsapp
+                        </Button>
+                      </Grid>
+                    ) : null}
                   </Grid>
                 </div>
               </div>
