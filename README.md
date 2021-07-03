@@ -1,1 +1,1 @@
-# jetflix
+# jetflix-movies-app
