@@ -30,7 +30,7 @@ const SingleContent = ({
   const textStyles = {
     color:
       colorArrays[0] * 0.299 + colorArrays[1] * 0.587 + colorArrays[2] * 0.114 >
-      186
+      149
         ? "#000000"
         : "#ffffff",
     fontWeight: "bold",
