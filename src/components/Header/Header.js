@@ -16,10 +16,15 @@ const maskStyles = {
   color: "transparent",
 };
 
+function handleTheme() {
+  localStorage.setItem("isDark", !isDark);
+  window.location.reload();
+}
+
 const Header = () => {
   return (
     <span
-      onClick={() => localStorage.setItem("isDark", !isDark)}
+      onClick={() => handleTheme()}
       className={`${isDark ? "header__dark" : "header__light"} header maskText`}
     >
       <span style={maskStyles}>Jetflix</span>
