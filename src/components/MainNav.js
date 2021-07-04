@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     position: "fixed",
     bottom: 0,
     backgroundColor: isDark ? "#000" : "#fff",
-    boxShadow: "0px 2px 15px #ea2027",
+    boxShadow: "0px 2px 15px #3742fa",
     zIndex: 100,
   },
 });
