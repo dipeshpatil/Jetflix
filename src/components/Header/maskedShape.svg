@@ -3,22 +3,22 @@
         <style>
             .mask_right {
                 clip-path: url(#right_clip-path);
-                fill: #7e7979;
+                fill: #fff000;
             }
             
             .mask_left {
                 clip-path: url(#left_clip-path);
-                fill: #7e7979;
+                fill: #fff000;
             }
             
             .left_triangle {
-                    fill:#fff;
+                    fill:#7e7979;
                     transform-origin: 110px 110px;
                     animation: rot 8s 0.5s infinite reverse cubic-bezier(0.645, 0.045, 0.355, 1);
             }
             
             .right_triangle {
-                fill: #fff;
+                fill: #7e7979;
                 transform-origin: 330px 110px;
                 animation: rot 8s 0.5s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
             }
@@ -44,9 +44,9 @@
     </clipPath>
  
     <linearGradient id="linear-gradient" y1="-17.636" x2="1.197" y2="-17.636" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#7e7979"/>
-      <stop offset="0.621" stop-color="#7e7979"/>
-      <stop offset="1" stop-color="#7e7979"/>
+      <stop offset="0" stop-color="#ea2027"/>
+      <stop offset="0.621" stop-color="#ea2027"/>
+      <stop offset="1" stop-color="#ea2027"/>
     </linearGradient>
         
     <rect id="background_gradient" data-name="background_gradient" class="gradient" width="550" height="220"/>

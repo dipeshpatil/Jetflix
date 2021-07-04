@@ -1,5 +1,7 @@
-import "./Header.css";
 import MaskedStyleSVG from "./maskedShape.svg";
+import "./Header.scss";
+
+const isDark = JSON.parse(localStorage.getItem("isDark"));
 
 const maskStyles = {
   margin: "0 auto",
@@ -16,10 +18,11 @@ const maskStyles = {
 
 const Header = () => {
   return (
-    <span onClick={() => window.scroll(0, 0)} className="header maskText">
-      <span className="" style={maskStyles}>
-        Jetflix
-      </span>
+    <span
+      onClick={() => localStorage.setItem("isDark", !isDark)}
+      className={`${isDark ? "header__dark" : "header__light"} header maskText`}
+    >
+      <span style={maskStyles}>Jetflix</span>
     </span>
   );
 };

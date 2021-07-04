@@ -9,11 +9,12 @@ import {
   unavailable,
   unavailableLandscape,
 } from "../../config/config";
-import "./ContentModal.css";
 import { Button, Grid } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import Carousel from "../Carousel/Carousel";
+
+import "./ContentModal.scss";
 
 const useStyles = makeStyles((theme) => ({
   modal: {

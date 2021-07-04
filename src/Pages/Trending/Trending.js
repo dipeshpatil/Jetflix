@@ -1,8 +1,9 @@
 import axios from "axios";
-import "./Trending.css";
 import { useEffect, useState } from "react";
 import SingleContent from "../../components/SingleContent/SingleContent";
 import CustomPagination from "../../components/Pagination/CustomPagination";
+
+import "./Trending.scss";
 
 const Trending = () => {
   const [page, setPage] = useState(1);
@@ -16,6 +17,8 @@ const Trending = () => {
     setContent(data.results);
   };
 
+  const isDark = JSON.parse(localStorage.getItem("isDark"));
+
   useEffect(() => {
     window.scroll(0, 0);
     fetchTrending();
@@ -24,7 +27,13 @@ const Trending = () => {
 
   return (
     <div>
-      <span className="pageTitle">Trending Today</span>
+      <span
+        className={`${
+          isDark ? "pageTitle__dark" : "pageTitle__light"
+        } pageTitle`}
+      >
+        Trending Today
+      </span>
       <div className="trending">
         {content &&
           content.map((c) => (

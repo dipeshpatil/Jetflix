@@ -1,13 +1,21 @@
+@import "./components/variables.scss";
+
 * {
   scroll-behavior: smooth;
 }
 
 .app {
   min-height: 100vh;
-  background-color: #000;
-  color: white;
   padding-top: 130px;
   padding-bottom: 70px;
+
+  &__dark {
+    background-color: $primaryDark;
+  }
+
+  &__light {
+    background-color: $primary;
+  }
 }
 
 @media (max-width: 700px) {
@@ -22,9 +30,17 @@
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   font-size: 2vw;
+  font-weight: bold;
   padding: 4px;
   border-radius: 50px;
-  color: white;
+
+  &__dark {
+    color: $white;
+  }
+
+  &__light {
+    color: $black;
+  }
 }
 
 @media (max-width: 1000px) {

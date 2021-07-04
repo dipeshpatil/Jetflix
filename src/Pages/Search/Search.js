@@ -6,12 +6,13 @@ import {
   TextField,
   ThemeProvider,
 } from "@material-ui/core";
-import "./Search.css";
 import SearchIcon from "@material-ui/icons/Search";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 import SingleContent from "../../components/SingleContent/SingleContent";
+
+import "./Search.scss";
 
 const Search = () => {
   const [type, setType] = useState(0);
@@ -19,12 +20,13 @@ const Search = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
+  const isDark = JSON.parse(localStorage.getItem("isDark"));
 
-  const darkTheme = createMuiTheme({
+  const theme = createMuiTheme({
     palette: {
-      type: "dark",
+      type: isDark ? "dark" : "light",
       primary: {
-        main: "#fff",
+        main: isDark ? "#fff" : "#000",
       },
     },
   });
@@ -38,7 +40,6 @@ const Search = () => {
       );
       setContent(data.results);
       setNumOfPages(data.total_pages);
-      // console.log(data);
     } catch (error) {
       console.error(error);
     }
@@ -52,7 +53,7 @@ const Search = () => {
 
   return (
     <div>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={theme}>
         <div className="search">
           <TextField
             style={{ flex: 1 }}

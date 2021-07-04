@@ -8,16 +8,22 @@ import SearchIcon from "@material-ui/icons/Search";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import { useHistory } from "react-router-dom";
 
+const isDark = JSON.parse(localStorage.getItem("isDark"));
+
 const useStyles = makeStyles({
   root: {
     width: "100%",
     position: "fixed",
     bottom: 0,
-    backgroundColor: "#000",
-    boxShadow: "0px 2px 15px #7e7979",
+    backgroundColor: isDark ? "#000" : "#fff",
+    boxShadow: "0px 2px 15px #ea2027",
     zIndex: 100,
   },
 });
+
+const bottomNavStyles = {
+  color: isDark ? "#f0f0f0" : "#000",
+};
 
 export default function SimpleBottomNavigation() {
   const classes = useStyles();
@@ -46,22 +52,22 @@ export default function SimpleBottomNavigation() {
       className={classes.root}
     >
       <BottomNavigationAction
-        style={{ color: "#f0f0f0" }}
+        style={bottomNavStyles}
         label="Trending"
         icon={<WhatshotIcon />}
       />
       <BottomNavigationAction
-        style={{ color: "#f0f0f0" }}
+        style={bottomNavStyles}
         label="Movies"
         icon={<MovieIcon />}
       />
       <BottomNavigationAction
-        style={{ color: "#f0f0f0" }}
+        style={bottomNavStyles}
         label="TV Series"
         icon={<TvIcon />}
       />
       <BottomNavigationAction
-        style={{ color: "#f0f0f0" }}
+        style={bottomNavStyles}
         label="Search"
         icon={<SearchIcon />}
       />

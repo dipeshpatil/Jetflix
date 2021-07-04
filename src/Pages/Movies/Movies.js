@@ -12,7 +12,7 @@ const Movies = () => {
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
   const genreforURL = useGenre(selectedGenres);
-  // console.log(selectedGenres);
+  const isDark = JSON.parse(localStorage.getItem("isDark"));
 
   const fetchMovies = async () => {
     const { data } = await axios.get(
@@ -32,7 +32,13 @@ const Movies = () => {
 
   return (
     <div>
-      <span className="pageTitle">Discover Movies</span>
+      <span
+        className={`${
+          isDark ? "pageTitle__dark" : "pageTitle__light"
+        } pageTitle`}
+      >
+        Discover Movies
+      </span>
       <Genres
         type="movie"
         selectedGenres={selectedGenres}
